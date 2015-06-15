@@ -1,10 +1,10 @@
-<div id="portfoliowrap" data-ng-controller="EventCtrl">
+
+<div id="portfoliowrap" >
     <div class="portfolio-centered">
-        <div class="recentitems portfolio">
+        <div class="recentitems portfolio" data-ng-controller="EventCtrl">
             <div class="portfolio-item" ng-repeat="event in events">
                 <div class="he-wrap tpl6">
-                    <img src="{{ event.imageurl }}" alt="">
-
+                    <div ng-bind-html="event.imageurl"></div>
                     <div class="he-view">
                         <div class="bg a0" data-animate="fadeIn">
                             <h3 class="a1" data-animate="fadeInDown">{{ event.eventtitle }}</h3>
@@ -24,6 +24,7 @@
     </div>
     <!-- portfolio container -->
 </div><!--/Portfoliowrap -->
+
 
 <script>
     // Portfolio
