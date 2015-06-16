@@ -1,5 +1,6 @@
 <div class="row" data-ng-controller="eventDetailCtrl">
-    <div class="col-lg-5 col-lg-offset-1 centered">
+    <div class="col-lg-5 col-lg-offset-1">
+        <h1>{{ eventDetails.title }}</h1>
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -28,8 +29,9 @@
     </div>
 
     <div class="col-lg-8 col-lg-offset-1">
-        <h1>{{ eventDetails.title }}</h1>
+
         <div class="spacing"></div>
+        <h3>More information</h3>
         <div ng-bind-html="eventDetails.body"></div>
     </div>
 

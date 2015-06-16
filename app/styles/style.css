@@ -46,6 +46,8 @@ p {
 	margin-top: 10px; 
 }
 
+.carousel-indicators{display:none !important;}
+
 img {
 	height: auto;
 	max-width: 100%;
