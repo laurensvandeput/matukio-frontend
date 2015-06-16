@@ -7,7 +7,14 @@
  * # MainCtrl
  * Controller of the matukioApp
  */
-
+angular.module('matukioApp')
+  .controller('MainCtrl', function ($scope) {
+    $scope.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
+  });
 
 angular.module('matukioApp')
     .controller('EventOverviewCtrl', function ($scope) {

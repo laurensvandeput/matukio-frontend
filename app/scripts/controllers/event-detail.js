@@ -9,11 +9,11 @@
  */
 
 angular.module('matukioApp')
-    .controller('eventDetailCtrl', ['$scope','$http', function($scope, $http,$routeParams){
+    .controller('eventDetailCtrl', ['$scope','$http', '$routeParams', function($scope, $http,$routeParams){
         $http.get('scripts/data.json').success (function(data){
 
             console.log('json call win!');
-            $scope.eventid = $routeParams.eventId;
+            $scope.eventid = $routeParams.id;
 
             angular.forEach(data.events, function(event) {
 

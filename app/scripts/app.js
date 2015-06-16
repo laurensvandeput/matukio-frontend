@@ -27,9 +27,9 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/event-detail/:eventId', {
+      .when('/event-detail/:id', {
             templateUrl: 'views/event-detail.html',
-            controller: 'EventDetailCtrl'
+            controller: 'eventDetailCtrl'
       })
       .otherwise({
         redirectTo: '/'
