@@ -255,13 +255,14 @@ a:focus {
 	margin: 0 0 50px 0 !important;
 	display:block;
     float: left;
+    width: 100%;
 }
 
 
 .portfolio-item .title:before {border-radius:0; display:none}
 .portfolio-item p {margin:0px 0 30px;}
 .portfolio-item h3 {margin:-10px 0 10px; font-size:16px; text-transform:uppercase;}
-.portfolio-item{width: 25%; float:left; height: 315px; overflow: hidden; padding: 10px 20px;}
+.portfolio-item{width: 25%; float:left; height: 315px; overflow: hidden; padding: 20px 10px;}
 
 .tpl6 h3
 {
@@ -459,3 +460,30 @@ csmall2 {
 	padding-right: 15px;
 	font-size: 18px;
 }
+
+
+@media screen and (min-width: 476px){
+    .portfolio-item{height: 350px; width: 50%;}
+}
+
+@media screen and (min-width: 630px){
+    .portfolio-item{height: 350px; width: 33%;}
+}
+
+@media screen and (max-width: 476px) {
+    .portfolio-item {
+        clear: both;
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+
+    .portfolio-item{height: 350px; width: 25%;}
+    .portfolio-item img{width: 100%; height: auto;}
+}
+
+
