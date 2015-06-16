@@ -23,9 +23,12 @@ angular.module('matukioApp')
         eventsService.getEventsOverview()
             .success(function(data) {
                 $scope.events = data;
+
         });
 
     }]);
+
+
 
 
 

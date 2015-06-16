@@ -67,6 +67,12 @@ body {
   }
 }
 
+.portfolio{
+  .portfolio-item{
+    width: 30%; float: left; height: 350px;overflow: hidden;
+  }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
