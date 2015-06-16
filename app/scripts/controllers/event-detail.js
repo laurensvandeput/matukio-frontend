@@ -16,6 +16,10 @@ angular.module('matukioApp')
                 $scope.eventDetails = data[0];
         });
 
-    }]);
+        eventDetailService.getSessions($routeParams.id)
+            .success(function(data) {
+                $scope.sessions = data;
+            });
 
+    }]);
 

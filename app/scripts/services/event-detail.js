@@ -9,6 +9,15 @@ angular.module('matukioApp')
                     .error(function (err) {
                         return err;
                     });
+            },
+            getSessions: function (eventID) {
+                return $http.get('http://tuk.io/sessions/' + eventID)
+                    .success(function (sessions) {
+                        return sessions;
+                    })
+                    .error(function (error) {
+                        return error;
+                    });
             }
         };
     }]);
