@@ -1,5 +1,5 @@
 <div class="row" data-ng-controller="eventDetailCtrl">
-    <div class="col-lg-10 col-lg-offset-1 centered">
+    <div class="col-lg-5 col-lg-offset-1 centered">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -17,14 +17,7 @@
         </div><! --/Carousel -->
     </div>
 
-    <div class="col-lg-5 col-lg-offset-1">
-        <h1>{{ eventDetails.title }}</h1>
-        <div class="spacing"></div>
-        <div ng-bind-html="eventDetails.body"></div>
-    </div>
-
-
-    <div class="col-lg-4 col-lg-offset-1">
+    <div class="col-lg-5">
         <div class="spacing"></div>
         <h4>Event Details</h4>
         <div class="hline"></div>
@@ -33,5 +26,14 @@
         <i class="fa fa-calendar" style="float: left; padding: 5px 16px;"></i><p><b>Date to:</b> {{ eventDetails.field_date_to_1 }}</p>
         <i class="fa fa-tags" style="float: left; padding: 5px 16px;"></i><p><b>Tags:</b> {{ eventDetails.field_event_tags }}</p>
     </div>
+
+    <div class="col-lg-8 col-lg-offset-1">
+        <h1>{{ eventDetails.title }}</h1>
+        <div class="spacing"></div>
+        <div ng-bind-html="eventDetails.body"></div>
+    </div>
+
+
+
 
 </div><! --/row -->
