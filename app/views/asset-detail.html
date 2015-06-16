@@ -28,13 +28,13 @@
     </div>
 
 
-    <div class="col-lg-4 col-lg-offset-1">
+    <div class="col-lg-5">
     <div class="spacing"></div>
     <div class="feedback-overview" ng-controller="assetFeedbackCtrl">
         <ul>
             <li ng-repeat="fb in feedback">
-                <div class="rating">{{ fb.field_feedback_rating }}</div>
-                <div class="feedback">{{ fb.field_feedback_feedback }}</div>
+                <div class="rating">Rating: {{ fb.field_feedback_rating }}</div>
+                <div class="feedback">Feedback: {{ fb.field_feedback_feedback }}</div>
             </li>
         </ul>
     </div>
