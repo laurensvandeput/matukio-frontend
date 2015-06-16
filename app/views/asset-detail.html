@@ -39,7 +39,7 @@
     <div class="feedback-from">
         <form ng-submit="submit()" ng-controller="feedbackPosterCtrl">
             <input type="text" ng-model="username" name="user" placeholder="Username" /><br />
-            <input type="text" ng-model="number" min="0" max="5" name="rating" placeholder="Rating 0-5" /><br />
+            <input type="text" ng-model="rating" min="0" max="5" name="rating" placeholder="Rating 0-5" /><br />
             <input type="text" ng-model="feedback" name="feedback" placeholder="Feedback" /><br />
             <input type="submit" id="submit" value="Submit" />
         </form>
