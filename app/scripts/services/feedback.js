@@ -8,7 +8,16 @@ angular.module('matukioApp')
           });
       },
       postFeedback: function (type, id, user, feedback, rating) {
-        return $http.post('http://ma.tuk.io/backend/' + type + '/' + id + '/feedback', {user: user, rating: rating, feedback: feedback})
+
+        var transform = function (data) {
+          return $.param(data);
+        };
+
+        return $http.post('http://ma.tuk.io/backend/' + type + '/' + id + '/feedback',
+          {user: user, rating: rating, feedback: feedback}, {
+            headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
+            transformRequest: transform
+          })
           .success(function (data) {
             return data;
           })

@@ -39,6 +39,14 @@
         <i class="fa fa-tags" style="float: left; padding: 5px 16px;"></i><p><b>Tags:</b> {{ eventDetails.field_event_tags }}</p>
     </div>
 
+    <div class="user-register">
+        <form ng-submit="submit()" ng-controller="userRegisterCtrl" class="bootstrap-frm">
+            <h4>Wanna subscribe?</h4>
+            <input type="text" ng-model="username" name="user" placeholder="Username" /><br />
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+    </div>
+
     <div class="col-lg-8 col-lg-offset-1">
 
         <div class="spacing"></div>

@@ -28,9 +28,7 @@ angular.module('matukioApp')
   .controller('feedbackPosterCtrl', ['$scope', '$http', '$routeParams', 'feedbackService', function ($scope, $http, $routeParams, feedbackService) {
 
     $scope.submit = function () {
-
       feedbackService.postFeedback('asset', $routeParams.id, $scope.username, $scope.feedback, $scope.rating);
-
     }
 
   }]);

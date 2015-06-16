@@ -14,6 +14,7 @@ angular.module('matukioApp')
         eventDetailService.getEventDetail($routeParams.id)
             .success(function(data) {
                 $scope.eventDetails = data[0];
+            console.log($scope);
         });
 
     }]);

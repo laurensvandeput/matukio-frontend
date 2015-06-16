@@ -17,21 +17,22 @@
         </div><! --/Carousel -->
     </div>
 
-    <!--
+
     <div class="col-lg-4 col-lg-offset-1">
         <div class="spacing"></div>
         <div class="feedback-overview" ng-controller="assetFeedbackCtrl">
             <ul>
                 <li ng-repeat="fb in feedback">
-                    <div class="rating">{{  }}</div>
-
+                    <div class="rating">{{ fb.field_feedback_rating }}</div>
+                    <div class="feedback">{{ fb.field_feedback_feedback }}</div>
                 </li>
             </ul>
         </div>
     </div>
-    -->
+
+
     <div class="feedback-from">
-        <form ng-submit="submit()" ng-controller="feedbackPosterCtrl" class="bootstrap-frm">
+        <form ng-submit="submit()" ng-controller="feedbackPosterCtrl" class="bootstrap-frm" name="addForm">
             <h4>You like this? Feel free to give feedback</h4>
             <input type="text" ng-model="username" name="user" placeholder="Username" /><br />
             <input type="text" ng-model="rating" min="0" max="5" name="rating" placeholder="Rating 0-5" /><br />
