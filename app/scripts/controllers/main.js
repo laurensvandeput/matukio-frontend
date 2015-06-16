@@ -17,7 +17,24 @@ angular.module('matukioApp')
   });
 
 angular.module('matukioApp')
-    .controller('EventOverviewCtrl', function ($scope) {
+    .factory('eventsService',['$http', function($http) {
+        return {
+            getEventsOverview: function() {
+               $http.get('http://tuk.io/events').success(function(data){
+                    return data;
+                });
+            }
+        };
+    }]);
+
+angular.module('matukioApp')
+    .controller('EventOverviewCtrl',[ '$scope', 'eventsService', function ($scope, eventsService) {
+
+        eventsService.getEventsOverview()
+            .success(function(data) {
+                $scope.events = data;
+        });
+        /*
         $scope.events = [
             {eventid:'1', eventtitle:'Event 1',imageurl:'<img src="images/dummy-project.jpg" alt="">', category:'Reading Group'},
             {eventid:'2', eventtitle:'Event 2',imageurl:'<img src="images/dummy-project.jpg" alt="">', category:'Reading Group'},
@@ -28,4 +45,8 @@ angular.module('matukioApp')
             {eventid:'7', eventtitle:'Event 7',imageurl:'<img src="images/dummy-project.jpg" alt="">', category:'Reading Group'},
 
         ];
-    });
+        */
+    }]);
+
+
+

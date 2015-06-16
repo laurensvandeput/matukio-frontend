@@ -11,13 +11,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="assets/img/portfolio/single01.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="assets/img/portfolio/single02.jpg" alt="">
-                </div>
-                <div class="item">
-                    <img src="assets/img/portfolio/single03.jpg" alt="">
+                    <img src="{{ eventDetails.field_asset_image }}" alt="">
                 </div>
             </div>
         </div><! --/Carousel -->
@@ -25,7 +19,7 @@
 
     <div class="col-lg-5 col-lg-offset-1">
         <div class="spacing"></div>
-        <h4>{{ eventid }}</h4>
+        <h4>{{ eventDetails.title }}</h4>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
         <h4>Our Proposal</h4>
         <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
