@@ -3,13 +3,13 @@
         <div class="recentitems portfolio" id="isotopeContainer" isotope-container>
             <div class="portfolio-item"  ng-repeat="event in events" isotope-item>
                 <div class="he-wrap tpl6">
-                    <div ng-bind-html="event.imageurl"></div>
+                    <div><img src="{{ event.field_asset_image }}" /></div>
                     <div class="he-view">
                         <div class="bg a0" data-animate="fadeIn">
-                            <h3 class="a1" data-animate="fadeInDown">{{ event.eventtitle }}</h3>
+                            <h3 class="a1" data-animate="fadeInDown">{{ event.title }}</h3>
                             <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_09.jpg" class="dmbutton a2"
                                data-animate="fadeInUp"><i class="fa fa-search"></i></a>
-                            <a href='#/event-detail/{{ event.eventid }}' class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
+                            <a href='#/event-detail/{{ event.nid }}' class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
                         </div>
                         <!-- he bg -->
                     </div>

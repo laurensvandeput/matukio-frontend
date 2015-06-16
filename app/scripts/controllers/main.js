@@ -20,7 +20,7 @@ angular.module('matukioApp')
     .factory('eventsService',['$http', function($http) {
         return {
             getEventsOverview: function() {
-               $http.get('http://tuk.io/events').success(function(data){
+               return $http.get('http://tuk.io/events').success(function(data){
                     return data;
                 });
             }
