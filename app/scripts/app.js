@@ -28,8 +28,12 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/event-detail/:id', {
-            templateUrl: 'views/event-detail.html',
-            controller: 'eventDetailCtrl'
+        templateUrl: 'views/event-detail.html',
+        controller: 'eventDetailCtrl'
+      })
+      .when('/asset-detail/:id', {
+        templateUrl: 'views/asset-detail.html',
+        controller: 'assetDetailCtrl'
       })
       .otherwise({
         redirectTo: '/'

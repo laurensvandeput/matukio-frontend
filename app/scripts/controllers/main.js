@@ -16,16 +16,6 @@ angular.module('matukioApp')
     ];
   });
 
-angular.module('matukioApp')
-    .factory('eventsService',['$http', function($http) {
-        return {
-            getEventsOverview: function() {
-               return $http.get('http://tuk.io/events').success(function(data){
-                    return data;
-                });
-            }
-        };
-    }]);
 
 angular.module('matukioApp')
     .controller('EventOverviewCtrl',[ '$scope', 'eventsService', function ($scope, eventsService) {
