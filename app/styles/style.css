@@ -266,9 +266,11 @@ a:focus {
 .portfolio-item h3 {margin:-10px 0 10px; font-size:16px; text-transform:uppercase;}
 .portfolio-item{width: 25%; float:left; height: 315px; overflow: hidden; padding: 20px 10px;}
 
-.registered-users ul li{
+.registered-users ul{
     margin-left:20px 35px;
 }
+
+
 
 
 .event-detail-image{
