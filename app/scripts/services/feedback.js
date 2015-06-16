@@ -2,7 +2,7 @@ angular.module('matukioApp')
   .factory('feedbackService', ['$http', function ($http) {
     return {
       getFeedback: function (type, id) {
-        return $http.get('http://tuk.io/' + id)
+        return $http.get('http://tuk.io/feedback/' + id)
           .success(function (data) {
             return data;
           });
