@@ -9,19 +9,13 @@
  */
 
 angular.module('matukioApp')
-    .controller('eventDetailCtrl', ['$scope','$http', '$routeParams', function($scope, $http,$routeParams){
-        $http.get('scripts/data.json').success (function(data){
+    .controller('eventDetailCtrl', ['$scope','$http', '$routeParams', 'eventDetailService', function($scope, $http, $routeParams, eventDetailService){
 
-            $scope.eventid = $routeParams.id;
-
-            angular.forEach(data, function(event) {
-                console.log(event);
-                if($scope.eventid === event.nid){
-                    $scope.eventDetails = event;
-                }
-            });
+        eventDetailService.getEventDetail($routeParams.id)
+            .success(function(data) {
+                $scope.eventDetails = data[0];
         });
-    }]
- );
+
+    }]);
 
 
