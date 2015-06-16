@@ -17,6 +17,8 @@ angular.module('matukioApp')
         .success(function(data) {
           $scope.eventDetails = data[0];
         });
+      $scope.username = '';
+      
 
     };
 

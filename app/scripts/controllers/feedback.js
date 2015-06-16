@@ -29,6 +29,9 @@ angular.module('matukioApp')
 
     $scope.submit = function () {
       feedbackService.postFeedback('asset', $routeParams.id, $scope.username, $scope.feedback, $scope.rating);
+      $scope.feedback = '';
+      $scope.rating = '';
+      $scope.username = '';
     }
 
   }]);
