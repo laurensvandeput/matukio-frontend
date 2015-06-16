@@ -14,7 +14,6 @@ angular.module('matukioApp')
     feedbackService.getFeedback('asset', $routeParams.id)
       .success(function (data) {
         $scope.feedback = data;
-        console.log($scope.feedback);
       })
 
   }])
@@ -30,8 +29,7 @@ angular.module('matukioApp')
 
     $scope.submit = function () {
 
-      // TODO don't hardcode type!
-      feedbackService.postFeedback('asset', $routeParams.id, $scope.user, $scope.feedback, $scope.rating);
+      feedbackService.postFeedback('asset', $routeParams.id, $scope.username, $scope.feedback, $scope.rating);
 
     }
 
