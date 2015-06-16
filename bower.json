@@ -15,5 +15,8 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "matukioApp"
+  "moduleName": "matukioApp",
+  "resolutions": {
+    "angular": "1.4.0"
+  }
 }
