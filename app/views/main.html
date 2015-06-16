@@ -1,13 +1,13 @@
 <div id="portfoliowrap" data-ng-controller="EventOverviewCtrl">
     <div class="portfolio-centered">
-        <div class="recentitems portfolio" id="isotopeContainer" isotope-container>
-            <div class="portfolio-item"  ng-repeat="event in events" isotope-item>
+        <div class="recentitems portfolio" id="isotopeContainer" isotope-container="events">
+            <div class="portfolio-item"  ng-repeat="event in events">
                 <div class="he-wrap tpl6">
                     <div><img src="{{ event.field_asset_image }}" /></div>
                     <div class="he-view">
                         <div class="bg a0" data-animate="fadeIn">
                             <h3 class="a1" data-animate="fadeInDown">{{ event.title }}</h3>
-                            <a data-rel="prettyPhoto" href="assets/img/portfolio/portfolio_09.jpg" class="dmbutton a2"
+                            <a data-rel="prettyPhoto" href="{{ event.field_asset_image }}" class="dmbutton a2"
                                data-animate="fadeInUp"><i class="fa fa-search"></i></a>
                             <a href='#/event-detail/{{ event.nid }}' class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-link"></i></a>
                         </div>
